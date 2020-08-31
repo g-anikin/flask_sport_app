@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert</title>
+</head>
+<body>
+{% if message %}
+<p>{{ message }}</p>
+{% endif %}
+
+<form action="" method="post">
+    <p>
+        <label for="name">Name------</label>
+        <input type="text" name="name">
+    </p>
+    <p>
+        <label for="body_part">Body_part</label>
+        <input type="text" name="body_part">
+    </p>
+    <p>
+        <label for="about">About-----</label>
+        <input type="text" name="about">
+    </p>
+    <p>
+        <label for="pic_link">Pic-link---</label>
+        <input type="text" name="pic_link">
+    </p>
+    <p>
+        <input type="submit" value="Insert">
+    </p>
+</form>
+<div class="btn-group" style="width:100%">
+    <button onclick="location.href='http://9306143f293c.ngrok.io'" style="width:10%">To the beginning</button>
+</div>
+</body>
+</html>

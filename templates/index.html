@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+<p>
+<div class="btn-group" style="width:100%">
+    <button onclick="location.href='http://9306143f293c.ngrok.io/table'" style="width:10%">Show all exercises</button>
+    <button onclick="location.href='http://9306143f293c.ngrok.io/body_parts'" style="width:10%">Show body parts</button>
+    <button onclick="location.href='http://9306143f293c.ngrok.io/random'" style="width:10%">Random exercises</button>
+    <button onclick="location.href='http://9306143f293c.ngrok.io/insert'" style="width:10%">Enter new exercises</button>
+    <button onclick="location.href='http://9306143f293c.ngrok.io/delete'" style="width:10%">Delete exercises</button>
+    <button onclick="location.href='http://9306143f293c.ngrok.io/logout'" style="width:10%">Log out</button>
+</div>
+<p></p>
+{% if table == 1 %}
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Exercise</th>
+        <th>Body_part</th>
+        <th>About</th>
+        <th>Pic_link</th>
+    </tr>
+    {% for item in items%}
+    <tr>
+        <td>{{item[0]}}</td>
+        <td>{{item[1]}}</td>
+        <td>{{item[2]}}</td>
+        <td>{{item[3]}}</td>
+        <td>{{item[4]}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% elif table == 2 %}
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Body_part</th>
+    </tr>
+    {% for item in items%}
+    <tr>
+        <td>{{item[0]}}</td>
+        <td>{{item[1]}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endif %}
+</body>
+</html>
